@@ -1,0 +1,27 @@
+{
+  "name": "fempire-firebase-functions",
+  "version": "0.0.0",
+  "description": "Firebase functions for all Fempire applications.",
+  "scripts": {
+    "deploy": "firebase deploy",
+    "deploy:travis": "firebase deploy --non-interactive --token $FIREBASE_TOKEN",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "logs": "firebase functions:log",
+    "postinstall": "npm --prefix ./functions install ./functions"
+  },
+  "devDependencies": {
+    "firebase-tools": "^3.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fempire/fempire-firebase-functions.git"
+  },
+  "author": "The Fempire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fempire/fempire-firebase-functions/issues"
+  },
+  "homepage": "https://github.com/fempire/fempire-firebase-functions#readme"
+}

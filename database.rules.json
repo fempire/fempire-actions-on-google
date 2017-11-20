@@ -1,0 +1,52 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "false",
+    "applications": {
+      ".read": "false",
+      ".write": "auth != null"
+    },
+    "profiles": {
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "geofire": {
+      "mentors": {
+        ".indexOn": [
+          "g"
+        ]
+      },
+      "organizers": {
+        ".indexOn": [
+          "g"
+        ]
+      },
+      "speakers": {
+        ".indexOn": [
+          "g"
+        ]
+      }
+    },
+    "mentors": {
+      ".indexOn": [
+        "name"
+      ]
+    },
+    "organizations": {
+      ".indexOn": [
+        "name"
+      ]
+    },
+    "organizers": {
+      ".indexOn": [
+        "name"
+      ]
+    },
+    "speakers": {
+      ".indexOn": [
+        "name"
+      ]
+    }
+  }
+}
