@@ -1,27 +1,35 @@
 {
-  "name": "fempire-firebase-functions",
+  "name": "fempire-api",
+  "description": "API endpoint for fempire speakers, organizers and mentors",
   "version": "0.0.0",
-  "description": "Firebase functions for all Fempire applications.",
   "scripts": {
     "deploy": "firebase deploy",
     "deploy:travis": "firebase deploy --non-interactive --token $FIREBASE_TOKEN",
-    "serve": "firebase serve --only functions",
-    "shell": "firebase experimental:functions:shell",
-    "start": "npm run shell",
-    "logs": "firebase functions:log",
+    "serve": "npm --prefix ./functions run serve",
+    "serve:watch": "npm --prefix ./functions run serve:watch",
+    "update": "node update.js",
     "postinstall": "npm --prefix ./functions install ./functions"
   },
-  "devDependencies": {
-    "firebase-tools": "^3.15.2"
-  },
+  "author": "Fempire",
+  "homepage": "https://github.com/fempire/fempire-api#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fempire/fempire-firebase-functions.git"
+    "url": "git+https://github.com/fempire/fempire-api.git"
   },
-  "author": "The Fempire",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fempire/fempire-firebase-functions/issues"
+    "url": "https://github.com/fempire/fempire-api/issues"
   },
-  "homepage": "https://github.com/fempire/fempire-firebase-functions#readme"
+  "readme": "README.md",
+  "license": "MIT",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "firebase-admin": "^7.0.0",
+    "geofirestore": "^3.2.2",
+    "listtojson": "0.0.6",
+    "mdjson": "^2.0.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.4.0"
+  }
 }

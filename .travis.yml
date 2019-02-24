@@ -1,9 +1,12 @@
 sudo: required
 language: node_js
 node_js:
-  - 8
+  - 10
+before_install:
+  - openssl aes-256-cbc -K $encrypted_a0aab26516de_key -iv $encrypted_a0aab26516de_iv -in serviceAccountKey.json.enc -out serviceAccountKey.json -d
 install:
-  - npm install -g firebase-tools
   - npm install
 script:
   - npm run deploy:travis
+after_success:
+  - npm run update

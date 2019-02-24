@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2017 Fempire - Women Tech Speakers & Organizers
+Copyright (c) 2019 Fempire - Women Tech Speakers & Organizers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,3 +1,10 @@
-node_modules
-etc
-serviceAccountKey.json
+## Compiled JavaScript files
+lib/
+**/*.js
+**/*.js.map
+
+# Typescript v1 declaration files
+typings/
+
+node_modules/
+firebase-debug.log
